@@ -90,11 +90,12 @@ fun AmphibianCard(
                 .padding(4.dp)
         ) {
             Text(
-                text = amphibians.type
-            )
-            Text(
                 text = amphibians.name
             )
+            Text(
+                text = "(${amphibians.type})"
+            )
+            Text(text = amphibians.description)
         }
 
         AsyncImage(

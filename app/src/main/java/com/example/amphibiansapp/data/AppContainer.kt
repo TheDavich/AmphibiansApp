@@ -38,7 +38,7 @@ class DefaultAppContainer: AppContainer {
      * DI implementation for Mars photos repository
      */
     override val amphibiansRepository: AmphibiansRepository by lazy {
-        NetworkAmphibiansRepository(retrofitService)
+        DefaultAmphibiansRepository(retrofitService)
     }
 
 }

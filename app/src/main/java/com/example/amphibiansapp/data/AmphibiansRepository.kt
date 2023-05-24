@@ -3,12 +3,20 @@ package com.example.amphibiansapp.data
 import com.example.amphibiansapp.model.Amphibians
 import com.example.amphibiansapp.network.AmphibiansApiService
 
+/**
+ * Repository retrieves amphibian data from underlying data source.
+ */
 interface AmphibiansRepository {
+    /** Retrieves list of amphibians from underlying data source */
     suspend fun getAmphibians(): List<Amphibians>
 }
 
-class NetworkAmphibiansRepository(
+/**
+ * Network Implementation of repository that retrieves amphibian data from underlying data source.
+ */
+class DefaultAmphibiansRepository(
     private val amphibiansApiService: AmphibiansApiService
 ) : AmphibiansRepository {
-    override suspend fun getAmphibians(): List<Amphibians> = amphibiansApiService.getData()
+    /** Retrieves list of amphibians from underlying data source */
+    override suspend fun getAmphibians(): List<Amphibians> = amphibiansApiService.getAmphibians()
 }
