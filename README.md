@@ -48,7 +48,7 @@ The user interface is built using Jetpack Compose, and it includes components li
 
 ViewModels
 The AmphibiansViewModel class manages the UI state and fetches data from the repository.
-##
+
 ## 🚀 Getting Started
 To run the app locally, follow these steps:
 
